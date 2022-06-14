@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" type="png" href="icon/hotel1.png">
+  <link rel="stylesheet" type="text/css" href="style/indexStyle.css">
+</head>
+<body>
+
+
+  <title>Home</title>
+
+<div class="header">
+  <h1>Royal Hotel</h1> 
+  <a href="index.html">
+  <img src="icon/hotel1.png" style="width: 60px; height: 60px;"/>
+</div>
+</a>
+
+
+
+<div class="topnav">
+  <a  href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="ServicesPage.html" ><i class='fas fa-hotel' style='font-size:17px'></i> Services</a>
+  <a href="RegisterPage.html" ><i class="fa fa-fw fa-user"></i> Sign Up</a></a>
+  <a href="LoginPage.html" ><i class="fa fa-fw fa-user"></i> Sign In</a>
+ <a  href="GalleryPage.html"  ><i class="material-icons" style="font-size:18px">photo_size_select_actual</i> Gallary</a>
+ <a  href="AboutPage.html"  ><i class="glyphicon glyphicon-user"></i> About</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Royal Hotal</h2>
+      <div class="img">
+      <a href="images/Chennai.jpg"  download="Hotel">
+        <img src="images/Chennai.jpg" style="height:300px; width: 900px; border-radius: 2px; border-color: royalblue;  "/>
+    </a>
+  </div>
+      <h4>The Hotel contains a number of distinctive
+         rooms and has a gym special for the hotel , also a special buffet for breakfast,
+          lunch and dinner and also contains a massage to relax.</4>
+    </div>
+    
+    <div class="card">
+      <h2>Hotel advantages</h2>
+<h4>The hotel has many advantages that make it a great choice for many tourists, Such as:</h4>
+<button class="accordion">First</button>
+<div class="panel">
+  <p>The hotel has free Wi-Fi throughout the hotel.</p>
+</div>
+
+<button class="accordion">Second</button>
+<div class="panel">
+  <p>The hotel has a cold and hot sauna.</p>
+</div>
+
+<button class="accordion">Third</button>
+<div class="panel">
+  <p>The hotel has a small mosque to perform the prayer.</p>
+</div>
+    <button class="accordion">Fourthly</button>
+<div class="panel">
+  <p>There is a beach overlooking the sea.</p>
+</div>
+<button class="accordion">Fifth</button>
+<div class="panel">
+  <p>The hotel has a small Cafe in entrance to the hotel</p>
+</div>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Information</h2>
+      <h3>The Hotel in the best Hotel to choose Hotels in the world.</h3>
+    </div>
+    
+   
+    <div class="card">
+      <h2>Clock</h2>
+      <div class="clock">
+        <div class="outer-clock-face">
+          <div class="marking marking-one"></div>
+          <div class="marking marking-two"></div>
+          <div class="marking marking-three"></div>
+          <div class="marking marking-four"></div>
+          <div class="inner-clock-face">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+          </div>
+        </div>
+      </div>
+      <div id="myDIV" class="headToDo">
+        <h7>To Do List</h7>
+        <input type="text" id="myInput" placeholder="Title..." autocomplete="off">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      
+      <ul id="myUL">
+      </ul>
+      </div>
+
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+     <script>
+       const secondHand = document.querySelector('.second-hand');
+const minsHand = document.querySelector('.min-hand');
+const hourHand = document.querySelector('.hour-hand');
+
+function setDate() {
+  const now = new Date();
+
+  const seconds = now.getSeconds();
+  const secondsDegrees = ((seconds / 60) * 360) + 90;
+  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+  const mins = now.getMinutes();
+  const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+  minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+  const hour = now.getHours();
+  const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+}
+
+setInterval(setDate, 1000);
+
+setDate();
+     </script>
+
+
+  </div>
+  </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h6>Royal Hotel</h6>
+  <h6 id="demo"></h6>
+<script>
+  var d = new Date();
+ document.getElementById("demo").innerHTML = d;
+</script>
+  <a href="index.html">
+  <img src="icon/hotel-1495606-1267777.png" style="width: 50px; height: 50px;"/>
+
+</body>
+</html>

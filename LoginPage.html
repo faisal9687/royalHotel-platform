@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="png" href="icon/hotel1.png">
+  <link rel="stylesheet" type="text/css" href="style/LoginPageStyle.css">
+</head>
+<body>
+
+    <title>Sign In</title>
+
+    <h1>Login Page </h1>
+    <div class="card">
+       
+    <form>
+        <p for="username">Username</p>
+        <input type="text" id="username" placeholder="Enter..."  autocomplete="off">
+        <p for="password">Password</p>
+        <input type="password" id="myInput" placeholder="Enter..."  autocomplete="off"><br><br>
+        <input type="checkbox" onclick="myFunction()"><h3>Show Password</h3>
+        <button  onclick="click">Sign in</button>
+       
+      </form>
+   
+      <script>
+        function click(){
+           alert("done login");
+        }
+      </script>
+
+      <script>
+        function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+      </script>
+
+    </div>
+   
+      <div class="footer">
+        <h2>Royal Hotel</h2>
+        <h2 id="demo"></h2>
+     <script>
+        var d = new Date();
+       document.getElementById("demo").innerHTML = d;
+  </script>
+        <a href="index.html">
+            <img  src="icon/hotel-1495606-1267777.png" width="50" height="50">
+      </div>
+</body>
+</html>

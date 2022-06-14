@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" type="png" href="icon/hotel1.png">
+  <link rel="stylesheet" type="text/css" href="style/UsersStylePage.css">
+
+ 
+</head>
+<body>
+
+
+
+<div class="container mt-3">
+  <h1>Users Table</h1>
+  <h4>Search the Users:</h4>
+  <input class="form-control" id="myInput" type="text" placeholder="Search.." autocomplete="off">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>1</td>
+        <td>Faisal</td>
+        <td>Ahmed</td>
+        <td>faisal@gmail.com</td>
+        <td>faisal7899</td>
+        <td>0501140508</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Aseel</td>
+        <td>Alsebaee</td>
+        <td>aseel@gmail.com</td>
+        <td>aseel1244</td>
+        <td>1234567</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Mohmmed</td>
+        <td>Saad</td>
+        <td>mohmmed123@gmail.com</td>
+        <td>mohmmed1234</td>
+        <td>123467421</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Naif</td>
+        <td>Saed</td>
+        <td>naif332@gmail.com</td>
+        <td>naif7654</td>
+        <td>986432</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Ibrahim</td>
+        <td>Tamer</td>
+        <td>ibrahim332@gmail.com</td>
+        <td>ibrahim713354</td>
+        <td>76237672</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Ramez</td>
+        <td>Ahmed</td>
+        <td>Ramez23113@gmail.com</td>
+        <td>ramez1234</td>
+        <td>21231321</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Hassan</td>
+        <td>Zaid</td>
+        <td>Hassan4234@gmail.com</td>
+        <td>hassan73254</td>
+        <td>985156432</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Anamr</td>
+        <td>Aseel</td>
+        <td>anmar332@gmail.com</td>
+        <td>anmar7654</td>
+        <td>123654987</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Motaz</td>
+        <td>Ahmed</td>
+        <td>Motaz3122@gmail.com</td>
+        <td>motaz7u8654</td>
+        <td>9855562</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Ahmed</td>
+        <td>yasser</td>
+        <td>ahmed12453@gmail.com</td>
+        <td>ahmed7654</td>
+        <td>9994551515</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Amer</td>
+        <td>Faisal</td>
+        <td>amer332@gmail.com</td>
+        <td>amer7654</td>
+        <td>986422232</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Fared</td>
+        <td>Fared</td>
+        <td>Fared332@gmail.com</td>
+        <td>Fared7654</td>
+        <td>12345679</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Rassel</td>
+        <td>mohmmed</td>
+        <td>rsrs332@gmail.com</td>
+        <td>rsrs7654</td>
+        <td>2154545</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>This Users registered in the hotel.</p>  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<div class="footer">
+  <h3>Royal Hotel</h3>
+  <h3 id="demo"></h3>
+<script>
+  var d = new Date();
+ document.getElementById("demo").innerHTML = d;
+</script>
+  <a href="index.html">
+  <img src="icon/hotel-1495606-1267777.png" style="width: 50px; height: 50px;"/>
+</div>
+
+</body>
+</html>
